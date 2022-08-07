@@ -25,6 +25,7 @@
             android:gravity="center"
             android:text="SIGN IN HERE"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="22dp"
             android:textStyle="bold" />
 
@@ -52,6 +53,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email"
+            app:startIconDrawable="@android:drawable/sym_action_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -71,6 +73,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
+            app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -97,6 +100,7 @@
             android:layout_marginTop="20sp"
             android:fontFamily="casual"
             android:text="Recovery Password?"
+            android:textColor="@color/teal_200"
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -143,12 +147,14 @@
             android:src="@drawable/google" />
 
         <TextView
+            android:id="@+id/signutext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:fontFamily="casual"
             android:text="new member? signup"
+            android:textColor="@color/teal_200"
             android:textSize="18sp"
             android:textStyle="bold" />
 
