@@ -3,6 +3,7 @@ package com.example.loginapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,6 +54,34 @@ public class SignUp extends AppCompatActivity {
         String Email = email.getEditText().getText().toString().trim();
         String Phone = phone.getEditText().getText().toString().trim();
         String Password = password.getEditText().getText().toString().trim();
+
+        if (Name.isEmpty()) {
+            name.setError("Your name is required");
+            name.requestFocus();
+            return;
+        }
+        if (Email.isEmpty()) {
+            email.setError("Your Email is required");
+            email.requestFocus();
+            return;
+        }
+        if (Password.isEmpty()) {
+            password.setError("Your Pass is required");
+            password.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+            email.setError("Please Provide Valid email");
+            email.requestFocus();
+            return;
+        }
+        if (Password.length() < 6) {
+            password.setError("Min Password length should be 6 char");
+            password.requestFocus();
+            return;
+        }
+
 
     }
 }
